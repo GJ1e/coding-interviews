@@ -6,11 +6,6 @@ package com.gj1e.question;
  * @Time 21:01
  */
 public class Solution48 {
-//    public static void main(String[] args) {
-//        Sloution48 test = new Sloution48();
-//        String  str = null;
-//        System.out.println(test.longestSubstringWithoutDuplication(str));
-//    }
     public int longestSubstringWithoutDuplication(String str){
         int curLength = 0;
         int maxLength = 0;
