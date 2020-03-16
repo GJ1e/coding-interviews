@@ -15,4 +15,4 @@
     
     - [二分查找](https://github.com/GJ1e/coding-interviews/blob/master/src/com/gj1e/searchalgorithm/BinarySearch.java)
     
-3. 如果有问题也欢迎加本人QQ825843207进行交流，欢迎start.
+3. 如果有问题也欢迎加本人QQ825843207进行交流，欢迎Star.
