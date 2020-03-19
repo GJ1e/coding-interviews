@@ -25,12 +25,7 @@ import java.util.ArrayList;
  *
  */
 public class Solution57 {
-//    public static void main(String[] args) {
-//        int[] a = new int[]{1,2,3,7,11,15};
-//        Sloution57 test = new Sloution57();
-//        System.out.println(test.findNumbersWithSum(a,15));
-//
-//    }
+
     public ArrayList<Integer> findNumbersWithSum(int[] nums , int s){
         if (nums == null)
             return null;
