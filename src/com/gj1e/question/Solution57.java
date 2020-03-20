@@ -30,7 +30,7 @@ public class Solution57 {
         if (nums == null)
             return null;
 
-        ArrayList<Integer> arrayList = new ArrayList<Integer>();
+        ArrayList<Integer> arrayList = new ArrayList<>();
         int low = 0;
         int high = nums.length-1;
 
