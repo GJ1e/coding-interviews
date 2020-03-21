@@ -28,20 +28,16 @@ public class Solution59 {
         }
         ArrayList<Integer> result = new ArrayList<>();
         //双端队列，用来记录每个窗口的最大值下标
-        LinkedList<Integer> qmax = new LinkedList<>();
+        LinkedList<Integer> queue = new LinkedList<>();
         for (int i = 0; i < num.length; i++) {
-            while (!qmax.isEmpty() && num[qmax.peekLast()] < num[i]) {
-                qmax.pollLast();
-            }
-            qmax.addLast(i);
-            //判断队首元素是否过期
-            if (qmax.peekFirst() == i - size) {
-                qmax.pollFirst();
-            }
-            //向result列表中加入元素
-            if (i >= size - 1) {
-                result.add(num[qmax.peekFirst()]);
-            }
+            while (!queue.isEmpty() && queue.peekFirst()<=i-size)
+                queue.pollFirst();
+            while (!queue.isEmpty() && num[i] >= num[queue.peekLast()])
+                queue.pollLast();
+            queue.addLast(i);
+
+            if (i >= size-1)
+                result.add(num[queue.peekFirst()]);
         }
         return result;
     }
