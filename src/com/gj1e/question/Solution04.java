@@ -42,32 +42,4 @@ public class Solution04 {
     }
 }
 
-//        if(array.length==0 || array[0].length==0)   //检查异常输入
-//            return false;
-//
-//        int row = array.length-1;   //数组行
-//        int cols = array[0].length-1;  //数组列
-//
-//        int i = 0;
-//        int j = cols;
-//
-//        while (i<=row || j>=0){
-//
-//            if(array[i][j] < target)    //
-//            {
-//                i++;
-//            }
-//            else if (array[i][j] > target)
-//            {
-//                j--;
-//            }
-//            else
-//            {
-//                return true;
-//            }
-//        }
-//        return false;
-//
-//    }
-
 
