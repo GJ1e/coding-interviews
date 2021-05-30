@@ -1,4 +1,4 @@
-package com.gj1e.leetcode.tree.hard;
+package com.gj1e.leetcode.tree.question;
 
 
 import com.gj1e.leetcode.tree.TreeNode;

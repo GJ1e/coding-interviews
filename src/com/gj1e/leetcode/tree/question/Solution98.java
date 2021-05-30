@@ -1,4 +1,4 @@
-package com.gj1e.leetcode.tree.middling;
+package com.gj1e.leetcode.tree.question;
 
 import com.gj1e.leetcode.tree.TreeNode;
 
