@@ -6,7 +6,7 @@ import com.gj1e.leetcode.tree.TreeNode;
  * @Author GJ1e
  * @Date 2021/5/25
  * 98. 验证二叉搜索树
- * 注：最快捷的方法为中序遍历，直接判断结果是否为升序。
+ * 注：最快捷的方法为中序遍历，直接判断结果是否为升序
  */
 public class Solution98 {
     class Info{
