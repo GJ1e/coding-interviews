@@ -12,7 +12,34 @@ import java.util.*;
  */
 public class Solution103 {
     public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
-
+        List<List<Integer>> resList = new ArrayList<>();
+        if (root == null) {
+            return resList;
+        }
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.offer(root);
+        boolean flag = true;
+        while (!queue.isEmpty()) {
+            Deque<Integer> list = new LinkedList<>();
+            int size = queue.size();
+            for (int i = 0; i < size; i++) {
+                root = queue.poll();
+                if (flag){
+                    list.offerLast(root.val);
+                }else {
+                    list.offerFirst(root.val);
+                }
+                if (root.left != null) {
+                    queue.offer(root.left);
+                }
+                if (root.right != null) {
+                    queue.offer(root.right);
+                }
+            }
+            resList.add(new LinkedList<>(list));
+            flag = !flag;
+        }
+        return resList;
     }
 
 }
