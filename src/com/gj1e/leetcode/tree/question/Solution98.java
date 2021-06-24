@@ -9,7 +9,7 @@ import com.gj1e.leetcode.tree.TreeNode;
  * 注：最快捷的方法为中序遍历，直接判断结果是否为升序
  */
 public class Solution98 {
-    class Info{
+    private class Info{
         boolean isBST;
         Integer max;
         Integer min;
