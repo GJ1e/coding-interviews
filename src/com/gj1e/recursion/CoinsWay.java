@@ -57,4 +57,11 @@ public class CoinsWay {
         }
         return dp[index][aim];
     }
+
+    public static void main(String[] args) {
+        CoinsWay way = new CoinsWay();
+        int[] arr = {5, 10, 50, 100};
+        int sum = 1000;
+        System.out.println(way.solution1(arr,sum));
+    }
 }
