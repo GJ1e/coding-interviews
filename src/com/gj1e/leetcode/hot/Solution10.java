@@ -6,6 +6,6 @@ package com.gj1e.leetcode.hot;
  */
 public class Solution10 {
     public boolean isMatch(String s, String p) {
-
+        return false;
     }
 }
