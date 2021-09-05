@@ -32,7 +32,7 @@ public class Solution02 {
         return pre.next;
     }
 
-    class ListNode {
+    private class ListNode {
         int val;
         ListNode next;
         ListNode() {}
