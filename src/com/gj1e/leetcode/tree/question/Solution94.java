@@ -18,10 +18,9 @@ public class Solution94 {
         }
         List<Integer> resList = new ArrayList<>();
         Stack<TreeNode> stack = new Stack<>();
-        stack.push(root);
         while (!stack.empty() || root != null){
-            if (root.left != null) {
-                stack.push(root.left);
+            if (root != null) {
+                stack.push(root);
                 root = root.left;
             }else {
                 root = stack.pop();
@@ -30,5 +29,16 @@ public class Solution94 {
             }
         }
         return resList;
+    }
+
+    public static void main(String[] args) {
+        Integer[] array = new Integer[]{1, 2, 3, 4, 5, null, 7};
+        TreeNode tree = TreeUtils.arrayToTree(array);
+        Solution94 test = new Solution94();
+        List<Integer> list = test.inorderTraversal(tree);
+        System.out.print("中序遍历：");
+        list.forEach(ele -> {
+            System.out.print("  " + ele);
+        });
     }
 }
