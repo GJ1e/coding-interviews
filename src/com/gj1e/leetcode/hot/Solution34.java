@@ -1,8 +1,7 @@
 package com.gj1e.leetcode.hot;
 
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Arrays;
 
 /**
  * @author FenDa
@@ -10,34 +9,29 @@ import java.util.List;
  */
 public class Solution34 {
     public static int[] searchRange(int[] nums, int target) {
-        int size = nums.length;
-        int[] res = new int[2];
-        List<Integer> list = new ArrayList<>();
-        if (size <= 0) {
-            return new int[]{-1, -1};
-        }
-        if (size == 1) {
-            return nums[0] == target ? new int[]{0, 0} : new int[]{-1, -1};
-        }
-        int low = 0;
-        int high = size-1;
-        while (low <= high) {
-            int mid = (low + high) / 2;
-            if (nums[mid] < target) {
-                low = mid + 1;
-            } else if (nums[mid] > target) {
-                high = mid - 1;
-            } else {
-                list.add(mid);
-            }
-        }
-        res[0] = list.get(0);
-        res[1] = list.get(list.size() - 1);
-        return res;
-    }
+        if(nums.length == 0) return new int[]{-1,-1};
 
+        int l = 0, r = nums.length - 1; //二分范围
+        while( l < r)			        //查找元素的开始位置
+        {
+            int mid = (l + r) / 2;
+            if(nums[mid] >= target) r = mid;
+            else l = mid + 1;
+        }
+        if( nums[r] != target) return new int[]{-1,-1}; //查找失败
+        int L = r;
+        l = 0; r = nums.length - 1;     //二分范围
+        while( l < r)			        //查找元素的结束位置
+        {
+            int mid = (l + r + 1) / 2;
+            if(nums[mid] <= target ) l = mid;
+            else r = mid - 1;
+        }
+        return new int[]{L,r};
+    }
     public static void main(String[] args) {
-        int[] nums = new int[]{5,7,7,8,8,10};
-        searchRange(nums, 8);
+        int[] nums = new int[]{5,6,7,7,8,8,9};
+        int[] res = searchRange(nums, 8);
+        System.out.println(Arrays.toString(res));
     }
 }
