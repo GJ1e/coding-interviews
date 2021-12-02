@@ -1,5 +1,6 @@
 package com.gj1e.test;
 
+import java.util.PriorityQueue;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
@@ -10,6 +11,7 @@ import java.util.concurrent.Executors;
  */
 public class CDTest {
     public static void main(String[] args) {
+        PriorityQueue priorityQueue = new PriorityQueue();
         ExecutorService service = Executors.newFixedThreadPool(2);
         final CountDownLatch cp = new CountDownLatch(1);
         final CountDownLatch xs = new CountDownLatch(100);

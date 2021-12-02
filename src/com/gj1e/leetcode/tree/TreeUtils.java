@@ -1,6 +1,5 @@
-package com.gj1e.leetcode.tree.question;
+package com.gj1e.leetcode.tree;
 
-import com.gj1e.leetcode.tree.TreeNode;
 
 /**
  * @author FenDa
