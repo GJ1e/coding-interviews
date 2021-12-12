@@ -37,4 +37,26 @@ public class BubbleSort {
         }
 
     }
+
+    public static void sort(int[] nums) {
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = 0; j < nums.length - i - 1; j++) {
+                if (nums[j] > nums[j + 1]) {
+                    int tmp = nums[j];
+                    nums[j] = nums[j + 1];
+                    nums[j + 1] = tmp;
+                }
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] nums = new int[]{1, 4, 2, 9, 34, 3};
+        Integer[] nums1 = new Integer[]{1, 4, 2, 9, 34, 3};
+        sort(nums);
+        QuickSort.sort(nums1,0,nums.length-1);
+        for (int i : nums1) {
+            System.out.println(i);
+        }
+    }
 }

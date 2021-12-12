@@ -40,7 +40,9 @@ public class QuickSort {
         a[i]=a[j];
         a[j]=temp;
     }
-//    private static boolean less(Comparable v, Comparable w){
+
+    //    private static boolean less(Comparable v, Comparable w){
 //        return v.compareTo(w) <0;
 //    }
+//
 }

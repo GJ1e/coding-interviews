@@ -31,22 +31,12 @@ public class Niuker {
 
     public static void main(String[] args) {
         List<String> list = new ArrayList<>();
-        list.add("asdhfj123");
-        list.add("123sdfs");
-        list.add("asda1234htfh");
-        list.add("1234fsasd");
+        list.add("123abccd");
+        list.add("abcdc123");
+        list.add("1234abc");
+        list.add("ab1234cd");
         List<String> strings = solution(list);
         strings.forEach(System.out::println);
-
-        Date date = new Date();
-        System.out.println(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(date));
-        Calendar cl = Calendar.getInstance();
-        cl.setTime(date);
-        cl.add(Calendar.HOUR,24);
-        date = cl.getTime();
-        boolean before = date.before(new Date());
-        System.out.println(before);
-        System.out.println(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(date));
     }
 }
 
